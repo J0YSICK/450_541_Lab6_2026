@@ -41,4 +41,13 @@ public class ScoreManager : MonoBehaviour
         // Print the new total to the Console window
         Debug.Log("Score: " + Score);
     }
+
+    public static int FinalScore { get; private set; }
+ 
+    // Called just before we leave the level
+    public void SaveFinalScore()
+    {
+        FinalScore = Score;
+    }
+
 }
